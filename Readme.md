@@ -11,8 +11,8 @@ A folder called `templates` will be copied to your target project, remember to s
 
 ### Code Sample
 ```
-using System.Xml.Linq;
 using DotBadge;
+using System.IO;
 
 namespace Badge
 {
@@ -21,8 +21,8 @@ namespace Badge
         static void Main(string[] args)
         {
             var bp = new BadgePainter();
-            var xDoc = XDocument.Parse(bp.DrawSVG("Nuget Downloads", "0 total", ColorScheme.Red, Style.Flat));
-            xDoc.Save(@"C:\Users\peng\Desktop\nuget.svg");
+            File.WriteAllText(@"C:\Users\peng\Desktop\nuget.svg", bp.DrawSVG("Badge", ".Net", ColorScheme.Red, Style.Flat));
+
         }
     }
 }
