@@ -1,4 +1,4 @@
-#A C# port of Shields-style badge library.
+# C# port of [Shields-style](http://shields.io/) badge library [DotBadge](http://rebornix.qiniudn.com/dotbadge.svg)
 
 ## How to integrate with your project
 To install DotBadge, run the following command in the Package Manager Console:
@@ -9,7 +9,7 @@ PM> Install-Package DotBadge
 
 A folder called `templates` will be copied to your target project, remember to set this folder as `Copy Always`
 
-## Sample
+## Code Sample
 ```
 using System.Xml.Linq;
 using DotBadge;
