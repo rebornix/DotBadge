@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
+using System.Reflection;
 
 namespace DotBadge
 {
@@ -34,13 +35,13 @@ namespace DotBadge
             switch (style)
             {
                 case Style.Flat:
-                    template = File.ReadAllText("templates/flat-template.xml");
+                    template = Properties.Resources.flat;
                     break;
                 case Style.FlatSquare:
-                    template = File.ReadAllText("templates/flat-square-template.xml");
+                    template = Properties.Resources.flatSquare;
                     break;
                 case Style.Plastic:
-                    template = File.ReadAllText("templates/plastic-template.xml");
+                    template = Properties.Resources.plastic;
                     break;
                 default:
                     template = File.ReadAllText("templates/flat-template.xml");
@@ -62,6 +63,18 @@ namespace DotBadge
                 status,
                 statusColor);
             return result;
+        }
+
+        public string ParseColor(string input)
+        {
+            var cs = new ColorScheme();
+
+            var fieldInfo = cs.GetType().GetField(input);
+            if (fieldInfo == null)
+            {
+                return String.Empty;
+            }
+            return (string)fieldInfo.GetValue(cs.GetType());
         }
     }
 }
