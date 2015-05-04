@@ -1,6 +1,6 @@
-## C# port of [Shields-style](http://shields.io/) badge library ![DotBadge](http://rebornix.qiniudn.com/dotbadge.svg)
+## C# port of [Shields-style](http://shields.io/) badge library and CLI ![DotBadge](http://rebornix.qiniudn.com/dotbadge.svg)
 
-## Standalone exe
+## CLI
 [Download](http://cmy.me/dotbadge)
 
 Invoke your commandline shell, and run `DotBadge.exe --help`.
@@ -12,8 +12,8 @@ Invoke your commandline shell, and run `DotBadge.exe --help`.
 
 `DotBadge.exe -sbhttps://github.com/rebornix/DotBadge/edit/master/Readme.md# "Star" -st "234" -c "#ddf" -sl 1` ![demo3](http://rebornix.qiniudn.com/demo3.svg)
 
-## Integrate with your project
-To ref the latest DotBadge, run following command in the Package Manager Console:
+## Nuget package
+To integrate the latest DotBadge with your project, run following command in the Package Manager Console:
 
 ```
 PM> Install-Package DotBadge
