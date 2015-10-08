@@ -128,14 +128,14 @@
   &lt;/mask&gt;
   &lt;g mask="url(#a)"&gt;
     &lt;path fill="#555" d="M0 0h{1}v20H0z"/&gt;
-	  &lt;path fill="{7}" d="M{1} 0h{2}v20H{1}z"/&gt;
-	  &lt;path fill="url(#b)" d="M0 0h{0}v20H0z"/&gt;
+    &lt;path fill="{7}" d="M{1} 0h{2}v20H{1}z"/&gt;
+    &lt;path fill="url(#b)" d="M0 0h{0}v20H0z"/&gt;
   &lt;/g&gt;
   &lt;g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11"&gt;
     &lt;text x="{3}" y="15" fill="#010101" fill-opacity=".3"&gt;{5}&lt;/text&gt;
-	  &lt;text x="{3}" y="14"&gt;{5}&lt;/text&gt;
-	  &lt;text x="{4}" y="15" fill="#010101" fill-opacity=".3"&gt;{6}&lt;/text&gt;
-	  &lt;text x="{4}" y="14"&gt;{6}&lt;/text&gt;
+    &lt;text x="{3}" y="14"&gt;{5}&lt;/text&gt;
+    &lt;text x="{4}" y="15" fill="#010101" fill-opacity=".3"&gt;{6}&lt;/text&gt;
+    &lt;text x="{4}" y="14"&gt;{6}&lt;/text&gt;
   &lt;/g&gt;
 &lt;/svg&gt;</value>
   </data>

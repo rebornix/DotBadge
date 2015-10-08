@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Reflection;
 
@@ -53,7 +54,9 @@ namespace DotBadge
             var subjectWidth = g.MeasureString(subject, font).Width;
             var statusWidth = g.MeasureString(status, font).Width;
 
-            var result = String.Format(template,
+            var result = String.Format(
+                CultureInfo.InvariantCulture, 
+                template,
                 subjectWidth + statusWidth,
                 subjectWidth,
                 statusWidth,
