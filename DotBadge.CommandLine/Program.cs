@@ -19,10 +19,11 @@ namespace DotBadge.CommandLine
             string subject = String.Empty;
             string status = String.Empty;
             string color = String.Empty;
+            string path = "badge.svg";
             Style style = Style.Flat;
             string errorMessage= String.Empty;
 
-            var p = new OptionSet()
+            var optionSet = new OptionSet()
             {
                 "Usage: DotBadge [OPTIONS]",
                 "The output image's content would be like Subject|Status",
@@ -65,6 +66,9 @@ namespace DotBadge.CommandLine
                         }
                     }
                 },
+                {
+                    "p|path=", "the value of Path", p => path = p
+                },
                 { 
                     "h|help",  "show this message and exit", v => showHelp = v != null 
                 },
@@ -82,7 +86,7 @@ namespace DotBadge.CommandLine
 
             try
             {
-                p.Parse(args);
+                optionSet.Parse(args);
             }
             catch (OptionException e)
             {
@@ -94,11 +98,16 @@ namespace DotBadge.CommandLine
 
             if (showHelp)
             {
-                p.WriteOptionDescriptions(Console.Out);
+                optionSet.WriteOptionDescriptions(Console.Out);
                 return;
             }
-            
-            File.WriteAllText(@"badge.svg", bp.DrawSVG(subject, status, color, style));
+            Console.WriteLine($"Path : {path}");
+            Console.WriteLine($"Subject : {subject}");
+            Console.WriteLine($"Status : {status}");
+            Console.WriteLine($"Color : {color}");
+            Console.WriteLine($"Style : {style}");
+            File.WriteAllText(path, bp.DrawSVG(subject, status, color, style));
+            Console.WriteLine("OK");
         }
     }
 }

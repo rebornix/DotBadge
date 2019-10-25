@@ -36,17 +36,16 @@ namespace DotBadge
             switch (style)
             {
                 case Style.Flat:
-                    template = Properties.Resources.flat;
+                    template = Resources.Flat;
                     break;
                 case Style.FlatSquare:
-                    template = Properties.Resources.flatSquare;
+                    template = Resources.FlatSquare;
                     break;
                 case Style.Plastic:
-                    template = Properties.Resources.plastic;
+                    template = Resources.Plastic;
                     break;
                 default:
-                    template = File.ReadAllText("templates/flat-template.xml");
-                    break;
+                    throw new ArgumentException(nameof(style));
             }
 
             Font font = new Font("DejaVu Sans,Verdana,Geneva,sans-serif", 11, FontStyle.Regular);
