@@ -1,0 +1,10 @@
+**/bin/*
+**/obj/*
+.*/*
+*.svg
+.dockerignore
+.editorconfig
+.gitattributes
+.gitignore
+Dockerfile
+README.md
